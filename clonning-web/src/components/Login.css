@@ -1,0 +1,271 @@
+.login{
+    background-image:url("https://www.12tails-th.com/assets/img/background/body.jpg");
+    position: relative;
+    
+    .header{
+        background-image: url("https://www.12tails-th.com/assets/img/background/header-inner.png");
+        background-size: 100% ;
+        background-position: center top;
+        background-repeat: no-repeat;
+        position: relative;
+        height: 350px;
+        .img-header{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 40px;
+        }
+        .text-header{
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 45px;
+            & h2{
+                color: #d9bb8f;
+                font-size: 28px;
+                letter-spacing: 2px;
+            }
+            & p{
+                color: aliceblue;
+                font-weight: bold;
+            }
+        }
+    }
+    .login-form{
+        color: #d9bb8f;
+        text-align: center;
+        position: absolute;
+        top: 18%;
+        right: 50%;
+        transform: translateX(50%);
+        z-index: 5;
+        .form-box{
+            position: relative;
+            &:first-child{
+                margin-bottom: 40px;
+            }
+            & label{
+                font-size: 20px;
+                font-weight: bold;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    left: 30%;
+                    width: 70px;
+                    height: 40px;
+                    background: url("https://www.12tails-th.com/assets/img/static/label-left.png") no-repeat;
+                }
+                &:after{
+                    content: '';
+                    position: absolute;
+                    right: 30%;
+                    width: 70px;
+                    height: 40px;
+                    background: url("https://www.12tails-th.com/assets/img/static/label-right.png") no-repeat;
+                }
+            }
+            .input-box{
+                position: relative;
+                width: 900px;
+                & input{
+                    background-color: #715f55;
+                    margin-top: 10px;
+                    width: 100%;
+                    padding: 12px;
+                    border-radius: 20px;
+                    border: none;
+                    font-size: 18px;
+                    text-align: center;
+                    color: #d9bb8f;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                & span{
+                    font-size: 20px;
+                    position: absolute;
+                    top: 40%;
+                    right: 20px;
+                    .checked{
+                        color: lightgreen;
+                    }
+                    .cross{
+                        color: rgb(235, 77, 77);
+                    }
+                }
+            }
+        }
+        .forgot{
+            margin-top: 40px;
+            text-align: start;
+            font-size: 16px;
+            cursor: pointer;
+            & h2{
+                &:hover{
+                    text-decoration: underline;
+                    
+                }
+            }
+        }
+    }
+    .login-btn{
+        background: url("https://www.12tails-th.com/assets/img/static/btn-primary.png") center no-repeat;
+        position: absolute;
+        width: 320px;
+        height: 80px;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        border: none;
+        font-size: 25px;
+        font-weight: bold;
+        color: #d9bb8f;
+        /* text-align: center; */
+       
+        &:disabled{
+            opacity: 0.5;
+            cursor:initial;
+            
+        }
+            
+    }
+    .guru{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        & h4{
+            position: absolute;
+            bottom: 180px;
+            left: 150px;
+            background-color: #4e4438;
+            color: #d9bb8f;
+            width: 180px;
+            text-align: center;
+            border-radius: 20px;
+            padding: 4px;
+            transform: perspective(1px) translateZ(0);
+            cursor: pointer;
+            &:hover{
+                animation: motion 1s infinite ;
+            }
+            &:before{
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 7px solid #4e4438;
+                transform: rotate(50deg);
+                bottom: 1px;
+                left: -3px;
+                &:hover{
+                    animation: motion 10s infinite;
+                    animation-timing-function: linear;
+                    }
+                }
+            }
+        }
+    
+    .panda{
+        position: absolute;
+        top: 100px;
+        right: 80px;
+    }
+    @media screen and (max-width:980px) {
+        .header{
+            .text-header{
+                
+                & h2{
+                    font-size: 25px;
+                }
+                & p{
+                   font-size: 15px;
+                }
+            }
+        }
+        .login-form{
+            .form-box{
+                &:first-child{
+                    margin-bottom: 20px;
+                }
+                & label{
+                    font-size: 16px;
+                    
+                    &:before{   
+                        left: 20%;
+                    }
+                    &:after{
+                        right: 20%;     
+                    }
+                }
+                .input-box{
+                    width: 500px;
+                    & input{   
+                        font-size: 16px;
+                    }
+                }
+            }
+            .forgot{
+                margin-top: 30px;
+                font-size: 12px;
+            }
+        }
+        .guru{
+            & img{
+                width: 80%;
+                height: 80%;
+            }
+            & h4{ 
+                bottom: 140px;
+                left: 90px;
+                width: 130px;
+                font-size: 12px;
+                }
+        }
+        
+        .panda{
+            display: none;
+        }
+    }
+    @media screen and (max-width:760px) {
+        .header{
+           .title-left , .title-right{
+            display: none;
+           }
+        }
+        .guru{
+            
+            & img{
+                width: 50%;
+                height: 50%;
+            }
+            & h4{ 
+                bottom: 80px;
+                left: 60px;
+            }
+        }
+       
+    }
+    @media screen and (max-width:560px) {
+        .login-form{
+            .form-box{
+                & label{
+                  
+                    &:before{   
+                        left: 10%;
+                    }
+                    &:after{
+                        right: 10%;     
+                    }
+                }
+                .input-box{
+                    width: 350px;
+                }
+            }
+        }
+    }
+    
+}

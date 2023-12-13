@@ -1,0 +1,330 @@
+.register{
+    background: url("https://www.12tails-th.com/assets/img/background/header-inner.png"),url("https://www.12tails-th.com/assets/img/background/body.jpg");
+    background-repeat: no-repeat,repeat;
+    background-size: contain,cover;
+    background-position: center top,center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 30px;
+    
+    
+    .text-header{
+        
+        position: relative;
+        margin-top: 50px;
+        & h2{
+            color: #d9bb8f;
+            background-image: url("https://www.12tails-th.com/assets/img/static/whead.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 60px;
+            width: 300px;
+            text-align: center;
+            letter-spacing: 1px;
+            font-size: 30px;
+        }
+        & p{
+            color: aliceblue;
+            text-align: center;
+            position: relative;
+            top: -20px;
+            font-weight: bold;
+            
+        }
+        &:before{
+            content: "";
+            position: absolute;
+            height: 50px;
+            width: 230px;
+            top: 10px;
+            left: -250px;
+            background-image: url("https://www.12tails-th.com/assets/img/static/whead-left.png");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &:after{
+            content: "";
+            position: absolute;
+            height: 50px;
+            width: 230px;
+            top: 10px;
+            right:-250px;
+            background-image: url("https://www.12tails-th.com/assets/img/static/whead-right.png");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    .register-form{
+        z-index: 50;
+        max-width: 1200px;
+        width: 50%;
+        .information-box{
+            display: flex;
+            flex-direction: column;
+            color: #d9bb8f;
+            margin-top: 30px;
+            position: relative;
+            & label{
+                
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    left: 30%;
+                    top: 5px;
+                    width: 70px;
+                    height: 40px;
+                    background: url("https://www.12tails-th.com/assets/img/static/label-left.png") no-repeat;
+                }
+                &:after{
+                    content: '';
+                    position: absolute;
+                    right: 30%;
+                    top: 5xp;
+                    width: 70px;
+                    height: 40px;
+                    background: url("https://www.12tails-th.com/assets/img/static/label-right.png") no-repeat;
+                }
+            }
+            & input{
+                width: 100%;
+                height: 100%;
+                color: #d9bb8f;
+                font-size: 20px;
+                text-align: center;
+                padding: 12px;
+                border-radius: 30px;
+                border: none;
+                background-color: #715f55;
+                margin-top: 5px;
+                &:focus{
+                    outline: none;
+                }
+            }
+            & span{
+                position: absolute;
+                top: 60%;
+                right: 20px;
+                
+                font-size: 18px;
+                .cross{
+                    color: rgb(235, 77, 77);
+                }
+                .check{
+                    color: lightgreen;
+                }
+            }
+        }
+       
+    }
+    .recaptcha{
+        margin-top: 40px;
+        z-index: 20; 
+    }
+    .register-btn{
+        background: url("https://www.12tails-th.com/assets/img/static/btn-primary.png");
+        background-repeat: no-repeat ;
+        background-size: cover;
+        background-position: center;
+        width: 320px;
+        height: 60px;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        color: #d9bb8f;
+        padding: 5px 0;
+        margin-top: 50px;
+        
+        text-align: center;
+        cursor: pointer;
+
+        /* user-select: none; */
+        &:active{
+            transform: translate(1px,2px);
+        }
+        &:disabled{
+            opacity: 0.5;
+            cursor:initial;
+            &:active{
+                transform: none;
+            }
+        }
+
+        
+    }
+    .guru{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        & h4{
+            position: absolute;
+            bottom: 180px;
+            left: 150px;
+            background-color: #4e4438;
+            color: #d9bb8f;
+            width: 180px;
+            text-align: center;
+            border-radius: 20px;
+            padding: 4px;
+            transform: perspective(1px) translateZ(0);
+            cursor: pointer;
+            &:hover{
+                animation: motion 1s infinite ;
+            }
+            &:before{
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 7px solid #4e4438;
+                transform: rotate(50deg);
+                bottom: 1px;
+                left: -3px;
+                &:hover{
+                    animation: motion 10s infinite;
+                    animation-timing-function: linear;
+                    }
+                }
+            }
+        }
+    
+    .panda{
+        position: absolute;
+        top: 100px;
+        right: 80px;
+        z-index: 1;
+    }
+    @media screen and (max-width:980px){
+        .text-header{
+        
+            position: relative;
+            margin-top: 50px;
+            & h2{
+                font-size: 25px;
+            }
+            & p {
+                font-size: 15px;
+            }
+            &:before{
+                width: 180px;  
+                left: -200px;
+                background-size:contain ;
+            }
+            &:after{
+                width: 180px;
+                right:-200px;
+                background-size:contain ;
+            }
+        }
+        .register-form{
+            width: 70%;
+            .information-box{
+                & label{
+                    font-size: 16px;
+                    &:before{
+                        left: 20%;
+                    }
+                    &:after{
+                        right: 20%;
+                    }
+                }
+                & input{ 
+                    font-size: 18px;
+                    padding: 8px;
+                }
+                & span{
+                    right: 10px;
+                }
+            }
+            
+        }
+        .panda{
+            display: none;
+        }
+        .guru{
+            & img{
+                width: 80%;
+                height: 80%;
+            }
+            & h4{ 
+                bottom: 140px;
+                left: 90px;
+                width: 130px;
+                font-size: 12px;
+                }
+        }
+        .register-btn{
+            margin-top: 20px;
+        }
+    }
+    
+    @media screen and (max-width:710px){
+        padding-bottom: 120px;
+        .text-header{
+        
+            position: relative;
+            margin-top: 50px;
+            & h2{
+                font-size: 25px;
+            }
+            & p {
+                font-size: 15px;
+            }
+            &:before{
+                display: none;
+            }
+            &:after{
+                display: none;
+            }
+        }
+        .register-form{
+            width: 80%;
+            .information-box{
+                & label{
+                    &:before{
+                        left: 10%;
+                    }
+                    &:after{
+                        right: 10%;
+                    }
+                }
+            }
+            
+        }
+        .guru{
+            
+            & img{
+                width: 50%;
+                height: 50%;
+            }
+            & h4{ 
+                bottom: 80px;
+                left: 60px;
+            }
+        }
+        .register-btn{
+            margin-top: 20px;
+            z-index: 999;
+        }
+        
+    }
+}
+@keyframes motion{
+    0%{
+        bottom: 180px;
+    }
+  
+    50%{
+        bottom: 190px;
+    }
+    
+}
